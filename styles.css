@@ -1,9 +1,132 @@
-body{
+body {
     background-color: pink;
 }
 
-h1{
+h1 {
     text-align: center;
     font-size: 50px;
     text-decoration: overline;
+}
+
+.bio {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+/* =========================
+   DROPDOWN
+   ========================= */
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+/* Cake button */
+
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+/* Cake image */
+
+.dropbtn img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    transition: transform 0.2s;
+}
+
+
+/* Cake hover */
+
+.dropbtn:hover img {
+    transform: scale(1.1);
+}
+
+
+/* =========================
+   DROPDOWN MENU
+   ========================= */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(145, 107, 113);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+/* Show menu */
+
+.dropdown-content.show {
+    display: block;
+}
+
+
+/* Menu links */
+
+.dropdown-content a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+/* Hover */
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+/* =========================
+   CURRENT PAGE
+   ========================= */
+
+.dropdown-content a.active {
+    background-color: #3498DB;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Checkmark */
+
+.dropdown-content a.active span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* Current page hover */
+
+.dropdown-content a.active:hover {
+    background-color: #2980B9;
+}
+
+.Drop{
+    font-size: 15px;
+    text-decoration: underline;
+}
+
+.img{
+    height: 500px;
+    align-items: left;
+    padding-right: 3000px;
 }
