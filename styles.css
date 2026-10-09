@@ -1,3 +1,4 @@
+
 body {
     background-color: pink;
 }
@@ -46,6 +47,9 @@ h1 {
     transform: scale(1.1);
 }
 
+
+/* Dropdown menu */
+
 .dropdown-content {
     display: none;
     position: absolute;
@@ -84,6 +88,9 @@ h1 {
     background-color: #ddd;
 }
 
+
+/* Active page */
+
 .dropdown-content a.active {
     background-color: #3498DB;
     color: white;
@@ -105,49 +112,74 @@ h1 {
     background-color: #2980B9;
 }
 
-.Drop{
+
+/* Cake heading */
+
+.Drop {
     font-size: 15px;
     text-decoration: underline;
 }
 
 
-.card {
-    background-color: pink;
-    width: 320px;
-    border-radius: 12px;
-    overflow: hidden; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
-}
- 
-/* Hover effect */
-.card:hover {
-    transform: translateY(-5px); /* Lift card slightly */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Deepen shadow on hover */
-}
- 
-/* Image styles */
-.card-image {
-    width: 100%;
-    height: 180px;
-    object-fit: cover; 
-    
-}
- 
-/* Card inner text container */
-.card-body {
-    padding: 20px;
-   margin-top: 20px;
 
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
- 
+
+
+
+.card {
+    background-color: rgb(172, 104, 116);
+    width: 30%;
+    max-width: 400px;
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+.card img {
+    width: 400px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 50px;
+}
+
+
+/* Card title */
+
 .card-title {
     margin: 0 0 10px 0;
     font-size: 1.4rem;
     color: #531616;
     text-decoration: underline;
 }
- 
+
+
+
+
 .card-text {
     margin: 0 0 20px 0;
     font-size: 1.10rem;
@@ -155,27 +187,8 @@ h1 {
     line-height: 1.5;
 }
 
-.card-container{
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between cards */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
 
-.card{
-    background-color:  rgb(172, 104, 116);
-    width: 320px;
-    border-radius: 12px;
-    overflow: hidden; 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
 
-}
-
-.card:hover {
-    transform: translateY(-5px); /* Lift card slightly */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Deepen shadow on hover */
-}
 
 .image-container {
     display: flex !important;
@@ -187,18 +200,61 @@ h1 {
 }
 
 .image-container img {
-    width: 225px;
+    width: 240px;
     height: 365px;
     object-fit: cover;
     border-radius: 12px;
-    gap: 200px;
 }
 
-h2{
+
+
+h2 {
     text-decoration: underline;
 }
 
-img{
-    width: 300px;
+
+
+
+img {
+    width: 200px;
     height: 225px;
+}
+
+
+
+
+p {
+    font-size: 20px;
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 2000px) {
+
+    .card-container {
+        gap: 30px;
+    }
+
+    .card {
+        width: 30%;
+    }
+
+}
+
+
+
+@media (max-width: 800px) {
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        max-width: 400px;
+    }
+
 }
